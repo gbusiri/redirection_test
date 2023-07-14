@@ -6,13 +6,20 @@
   <meta http-equiv="expires" content="0">
   <meta http-equiv="pragma" content="no-cache">
   <script>
-    // Execute the code when the page finishes loading
     window.onload = function() {
-      // Delay the redirect by 3 seconds (3000 milliseconds)
-      setTimeout(function() {
-        // Redirect to the desired page
+      var redirectButton = document.createElement("button");
+      redirectButton.innerHTML = "Click Now";
+      redirectButton.onclick = function() {
         window.location.href = "https://allofresh.id/transcheckout/index/success?orderid=1209781&childOrderId=1209783";
-      }, 3000); // Adjust the delay time as needed
+      };
+
+      document.body.appendChild(redirectButton);
+
+      var redirectDelay = 3000; // Adjust the delay time as needed
+      setTimeout(function() {
+        redirectButton.style.display = "none"; // Hide the button after the delay
+        window.location.href = redirectButton.onclick(); // Perform the redirect
+      }, redirectDelay);
     };
   </script>
 </head>
