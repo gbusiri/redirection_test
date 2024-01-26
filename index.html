@@ -10,15 +10,15 @@
       var redirectButton = document.createElement("button");
       redirectButton.innerHTML = "Click Now";
       redirectButton.onclick = function() {
-        window.location.href = "https://allofresh.id/transcheckout/index/success?orderid=1209781&childOrderId=1209783";
+        window.location.href = "https://allofresh.id/cart";
       };
 
       document.body.appendChild(redirectButton);
 
-      var redirectDelay = 3000; // Adjust the delay time as needed
+      var redirectDelay = 20000; // Adjust the delay time as needed
       setTimeout(function() {
         redirectButton.style.display = "none"; // Hide the button after the delay
-        window.location.href = "https://allofresh.id/transcheckout/index/success?orderid=1209781&childOrderId=1209783";
+        window.location.href = "https://allofresh.id/cart";
       }, redirectDelay);
     };
   </script>
